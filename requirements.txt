@@ -1,0 +1,6 @@
+IPython
+matplotlib
+ultralytics
+roboflow
+opencv-python
+requests
