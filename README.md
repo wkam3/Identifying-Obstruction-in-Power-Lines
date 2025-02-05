@@ -54,6 +54,8 @@ If OpenCV (`cv2`) does not work properly, try installing:
 pip install opencv-python-headless
 ```
 
+If the error still persists, restart your terminal.
+
 ---
 
 ### **6. Deactivating the Environment**  
