@@ -1,0 +1,29 @@
+{
+  "api_key": "LUfenSmTeCzCw24QScjY",
+  "roboflow": {
+    "workspace": "powerlineobstructiondetection",
+    "project": "test-kpzbb",
+    "version": 4
+  },
+  "model": {
+    "path": "yolo11n.pt",
+    "training": {
+      "epochs": 50,
+      "imgsz": 416,
+      "batch": 4,
+      "device": "0",
+      "amp": true,
+      "classes": [0]
+    }
+  },
+  "class_colors": {
+    "5": [0, 255, 255],
+    "7": [0, 255, 0],
+    "0": [0, 0, 255]
+  },
+  "class_names": {
+    "1": "poles",
+    "2": "wires",
+    "0": "obstruction"
+  }
+}
