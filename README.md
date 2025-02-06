@@ -6,15 +6,23 @@ This guide will help you set up a Python environment to run the object detection
 
 ## **Setup Instructions with Anaconda Prompt**  
 
-### **1. Clone the Repository**  
+### **1. Log onto DSMLP for gpu access (campus vpn method)**  
 ```bash
-git clone https://github.com/YOUR_USERNAME/Identifying-Obstruction-in-Power-Lines.git
-cd Identifying-Obstruction-in-Power-Lines
+ssh <username>@dsmlp-login.ucsd.edu
+launch-scipy-ml.sh -W DSC180A_FA24_A00 -g 1
 ```
 
 ---
 
-### **2. Create a New Conda Environment**  
+### **2. Clone the Repository**  
+```bash
+git clone https://github.com/YOUR_USERNAME/Identifying-Obstruction-in-Power-Lines.git
+cd Identifying-Obstruction-in-Power-Lines/Project_code
+```
+
+---
+
+### **3. Create a New Conda Environment**  
 ```bash
 conda create --name object-detection-env python=3.10
 ```
@@ -26,24 +34,22 @@ conda activate object-detection-env
 
 ---
 
-### **3. Install Dependencies**  
+### **4. Install Dependencies**  
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-### **4. Start Jupyter Notebook**  
+### **5. Run the Script**  
 ```bash
-pip install notebook
-jupyter notebook
+python script.py setup data train annotate
 ```
-
-Open the `ObjectDetection_Final.ipynb` file and run the cells.
+The whole script should take 20-30 minutes due to training. Final annotated images are stored in the Annotated Folder.
 
 ---
 
-### **5. Troubleshooting**  
+### **6. Troubleshooting**  
 If you encounter issues with `ultralytics` or `roboflow`, ensure you have the latest versions:  
 ```bash
 pip install --upgrade ultralytics roboflow
@@ -58,7 +64,7 @@ If the error still persists, restart your terminal.
 
 ---
 
-### **6. Deactivating the Environment**  
+### **7. Deactivating the Environment**  
 When you're done, deactivate the virtual environment:  
 ```bash
 conda deactivate
