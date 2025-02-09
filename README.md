@@ -62,6 +62,18 @@ pip install opencv-python-headless
 
 If the error still persists, restart your terminal.
 
+If you are having issues with the environment and running in DSMLP, launch the scipy-ml environment and try:
+```bash
+conda activate object-detection-env
+```
+```bash
+pip install ipykernel
+```
+```bash
+python -m ipykernel install --user --name object-detection-env --display-name "Python (object-detection-env)"
+```
+Then select the kernel "Python (object-detection-env)" in the notebook.
+
 ---
 
 ### **7. Deactivating the Environment**  
