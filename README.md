@@ -17,7 +17,7 @@ launch-scipy-ml.sh -W DSC180A_FA24_A00 -g 1
 ### **2. Clone the Repository**  
 ```bash
 git clone https://github.com/YOUR_USERNAME/Identifying-Obstruction-in-Power-Lines.git
-cd Identifying-Obstruction-in-Power-Lines/Project_code
+cd Identifying-Obstruction-in-Power-Lines
 ```
 
 ---
@@ -43,6 +43,7 @@ pip install -r requirements.txt
 
 ### **5. Run the Script**  
 ```bash
+cd Project_code
 python script.py setup data train annotate
 ```
 The whole script should take 20-30 minutes due to training. Final annotated images are stored in the Annotated Folder.
@@ -74,6 +75,10 @@ python -m ipykernel install --user --name object-detection-env --display-name "P
 ```
 Then select the kernel "Python (object-detection-env)" in the notebook.
 
+If you are having gpu errors such as error running pods, you may have to delete all pods and ssh in again,=.
+```bash
+kubectl delete --all pods
+```
 ---
 
 ### **7. Deactivating the Environment**  
