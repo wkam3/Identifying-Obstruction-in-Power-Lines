@@ -1,0 +1,65 @@
+﻿linetype,equipment type,cause,no_of_outage_2020-2024
+Distribution,Pole,Pole - contact/damage/broke/rotted/on fire,214
+Distribution,Crossarm,Crossarm failure/contact,197
+Distribution,Transformer,Transformer (station) failure/contact,197
+Distribution,Connection device,OH connector failure (jumper/splice/squeeze-on),163
+Distribution,Cutout,Cutout failure,162
+Distribution,Conductor,Conductor contact/failure/overload/wire slap,143
+Distribution,Lightning arrestor,Arrester failure,112
+Distribution,Fuse,Fuse - overload/inadequate size/fatigue,87
+Distribution,Connection device,Pothead failure,65
+Distribution,Switch,Switch failure/contact,55
+Distribution,Capacitor bank,Capacitor/cap bank failure,49
+Distribution,Connection device,Hardware failure,40
+Distribution,Conductor,Wire slap/pole down/wire down (severe weather),39
+Distribution,Insulator and bushing,Insulator/pin failure,34
+Distribution,Switch,Switch or Disconnect failure/contact,22
+Distribution,Fuse,Undetermined (severe weather),19
+Distribution,Pole,Wire slap/pole down/wire down (severe weather),14
+Distribution,Connection device,UG connector failure (splice/rack/tap/shoofly/sleeve/probe/LBE/bushing),11
+Transmission,Other,Other Transmission Equipment,11
+Distribution,Cutout,Undetermined (severe weather),9
+Distribution,Connection device,Undetermined (severe weather),8
+Distribution,Recloser,Recloser/service restorer failure/contact,8
+Distribution,Conductor,Ice/snow/equipment failure (severe weather),7
+Distribution,Fuse,Fuse holder/fuse cabinet,7
+Transmission,Pole,Pole,7
+Distribution,Conductor,Primary wire down,6
+Distribution,Voltage regulator/booster,Regulator failure/contact,6
+Transmission,Conductor,Conductor,6
+Distribution,Anchor/guy,Guy wire/anchor failure,5
+Transmission,Conductor,Static Wire,4
+Distribution,Conductor,Undetermined (severe weather),3
+Distribution,Lightning arrestor,Undetermined (severe weather),3
+Distribution,Pole,Ice/snow/equipment failure (severe weather),3
+Distribution,Pole,Undetermined (severe weather),3
+Transmission,Conductor,Wind,3
+Transmission,Switch,Line Switch,3
+Distribution,Conductor,Snow/Ice (severe weather),2
+Distribution,Connection device,Ice/snow/equipment failure (severe weather),2
+Distribution,Crossarm,Wire slap/pole down/wire down (severe weather),2
+Distribution,Equipment Failure - Other,Faulted cable,2
+Distribution,Equipment Failure - Other,Ice/snow/equipment failure (severe weather),2
+Distribution,Transformer,Undetermined (severe weather),2
+Transmission,Anchor/guy,Guy,2
+Transmission,Crossarm,Crossarm,2
+Transmission,Insulator and brushing,Insulator (non-flashover),2
+Transmission,Unknown,Other Natural,2
+Distribution,Anchor/guy,Undetermined (severe weather),1
+Distribution,Conductor,Flashover (severe weather),1
+Distribution,Conductor,Secondary wire down,1
+Distribution,Connection device,Wire slap/pole down/wire down (severe weather),1
+Distribution,Crossarm,Undetermined (severe weather),1
+Distribution,Crossarm,Ice/snow/equipment failure (severe weather),1
+Distribution,Cutout,Ice/snow/equipment failure (severe weather),1
+Distribution,Equipment Failure - Other,Tee failure,1
+Distribution,Fuse,Snow/Ice (severe weather),1
+Distribution,Insulator and bushing,Undetermined (severe weather),1
+Distribution,Lightning arrestor,Snow/Ice (severe weather),1
+Distribution,Recloser,Undetermined (severe weather),1
+Distribution,Switch,Ice/snow/equipment failure (severe weather),1
+Distribution,Switch,Flashover (severe weather),1
+Transmission,Insulator and brushing,Other Transmission Equipment,1
+Transmission,Insulator and brushing,Other Natural,1
+Transmission,Insulator and brushing,Other Substation Equipment,1
+Transmission,Switch,"Flashover Switch, Disconnect",1
