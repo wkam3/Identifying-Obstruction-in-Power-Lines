@@ -22,6 +22,16 @@ Our methodology for developing an obstruction detection system for electrical as
 
 **figure here**
 
+<details>
+  <summary><strong>Exploratory Data Analysis (EDA)</strong></summary>
+  <p>We began by conducting EDA on outage data and infraction data per equipment type...</p>
+</details>
+
+<details>
+  <summary><strong>Dataset Curation</strong></summary>
+  <p>We gathered relevant videos and images, then used Roboflow for image annotation...</p>
+</details>
+
 The implementation of our models' consisted of five primary phases: EDA(exploratory data analysis), dataset curation, model configuration, training optimization, and performance evaluation. We first began by conducting EDA on outage data and infraction data per equipment type and we able to see that poles,conductors, and crossarms were the electrical assets that had the highest number of outages and infractions. We then began curating data for our model by gathering relevant videos and images then pipelining our images into a tool called Roboflow where we conducted image annotation. Yolo datasets comprise of both images and annotations as an additional json file. To create these annotations we drew  bounding polygons for each of our images for each class we were labeling (poles, wires, obstructions). Roboflow provided user interface to perform these annotations as well as transforming our annotations into an accompanying json label dataset. We ended up compiling a dataset of 383 annotated images with an almost equal split between obstruction and non obstruction images. After creating our dataset we also included preprocessing steps as well as augmentations to generate more images. In our preprocessing we included auto-orient, resize, and contrast adjustment. Moreover, in our augmentation steps we performed both horizontal and vertical flips, rotations, shears, changes in hue, brightness, and exposure, blur, and noise. This resulted in an increase from 383 images to 1023 images. We then split our data into 94% training, 3% validation, and 3% test data. To train our model we took three different approaches. Our first approach was training directly on all of our labeled classes: poles, wires, and obstructions. Our second approach sought to use three different models for each respective class. These three models were independently trained on our full dataset to ensure optimal performance in each category. Following the training phase we applied each models' predictions to our test set and then implemented a NMS (Non-maximum suppression) strategy to refine our results and isolate our most confident predictions. This technique allowed us to retain only the most robust detections. Our final approach was training only on obstructions. We utilized a new dataset of only 81 images   The parameters we used to train were 50 epochs, input image size of 416x416 pixels, batch sizes of 4, Automatic Mixed Precision enabled, and classes set to obstruction only. Following training we developed code to annotate our test images with our models' predictions and display metrics.
 
     Notes:
