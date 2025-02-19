@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SDG&E Identifying Power Line Obstructions
+title: Computer Vision-Based Obstruction Detection
 ---
 
 # SDG&E Identifying Power Line Obstructions
