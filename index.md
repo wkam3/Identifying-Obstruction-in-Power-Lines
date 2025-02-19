@@ -9,7 +9,7 @@ title: Computer Vision-Based Obstruction Detection
 This project leverages advanced computer vision models to automatically detect and classify obstructions near SDG&E power lines. By analyzing visual/aerial data, the system aims to identify potential hazards like vegetation encroachment and damaged equipment before they can cause infrastructure damage or trigger wildfires. This proactive approach enhances grid reliability and public safety through early detection of risks.
 
 ## Introduction
--intro from report
+In recent years, California has been faced with an intensifying amount of wildfires, largely influenced by urban development and fire-prone regions. A large contributor to these wildfire ignitions is electrical infrastructure when high winds, vegetation, and equipment failures can lead to devastating fires. To mitigate this risk, utility companies such as San Diego Gas \& Electric (SDGE) have implemented Public Safety Power Shutoffs (PSPS), a strategy that involves de-energizing power lines during high-risk conditions. While PSPS has proven effective in reducing wildfire ignitions, it also poses far-reaching consequences, including economic losses and health risks for vulnerable populations. As wildfire threats continue to grow, there is a pressing need for proactive, data-driven approaches to assess and mitigate fire risks associated with electrical infrastructure.
 
 ## Methodology
 -methodology from report
