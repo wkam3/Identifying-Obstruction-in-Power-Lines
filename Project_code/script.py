@@ -16,7 +16,7 @@ from functions import (
     display_results
 )
 home_dir = os.path.expanduser("~")
-config_path = os.path.join(home_dir, "Identifying-Obstruction-in-Power-Lines", "Project_code", "config.json")
+config_path = os.path.join(home_dir, "Identifying-Obstruction-in-Power-Lines", "Project_code", "config_ObstructionsOnly.json") # change based on model
 def load_config(config_path=config_path):
     with open(config_path, 'r') as config_file:
         return json.load(config_file)
