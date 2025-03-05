@@ -43,11 +43,17 @@ pip install -r requirements.txt
 ---
 
 ### **5. Run the Script**  
+You need to specify which model you want to run the model options availabe are AllClasses, Obstruction-Only, and NMS. For NMS the functions are a bit different and are shown below the other two models are the same except for the model type parameter.
 ```bash
 cd Project_code
-python script.py setup data train annotate
+#NMS model
+python script.py NMS setup data train_nms_model annotate_nms_model evaluate_nms_model
+#All Classes
+python script.py AllClasses setup data train annotate evaluate
+#Obstruction Only
+python script.py ObstructionsOnly setup data train annotate evaluate
 ```
-The whole script should take 20-30 minutes due to training. Final annotated images are stored in the Annotated Folder.
+The whole script should take 20-30 minutes due to training for obstruction only and all classes model while the NMS takes 40-60 minutes as we are training three models in this approach. Final annotated images are stored in respective Annotated Folders.
 
 ---
 
