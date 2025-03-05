@@ -87,7 +87,7 @@ def annotate_images(model, class_colors, class_names):
         cv2.imwrite(output_path, image)
 
 def evaluate_model(model):
-    metrics = model.val()
+    metrics = model.val(split='test', iou=0.3)
     results = metrics.results_dict
     for metric, value in results.items():
         print(f"{metric}: {value}")
