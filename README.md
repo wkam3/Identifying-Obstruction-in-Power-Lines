@@ -88,7 +88,7 @@ kubectl delete --all pods
 ```
 ---
 
-### **7 Activating the Demo App
+### **7. Activating the Demo App**
 1. Open the project
 2. activate environment (described earlier)
 3. run (for mac. May be different for windows.):
