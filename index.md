@@ -8,7 +8,7 @@ title: Computer Vision-Based Obstruction Detection
 ## Overview
 This project leverages advanced computer vision models to automatically detect and classify obstructions near SDG&E power lines. By analyzing visual/aerial data, the system aims to identify potential hazards like vegetation encroachment and damaged equipment before they can cause infrastructure damage or trigger wildfires. This proactive approach enhances grid reliability and public safety through early detection of risks.
 
-![Alt text]('./photos/twig-on-powerline.png')
+![In this image a branch is being identified by our model as an obstruction.]('./photos/twig-on-powerline.png')
 **Video of working model demonstration**
 
 ## Introduction
