@@ -66,19 +66,20 @@ The implementation of our models' consisted of five primary phases: EDA(explorat
 
 ## Results
 
-## Conclusion
-Our findings underscore the importance of tailoring the modeling approach to the specific needs of the task at hand. In the context of electrical asset management, the ability to reliably detect obstructions proved more valuable than a more comprehensive but potentially less accurate multi-class detection system.
-
 **Model Performance Comparison table**
 
 **Obstruction-Only Model**
-The obstruction-only model emerged as our best-performing approach. By focusing exclusively on detecting obstructions, this model demonstrated superior performance in identifying potential hazards.
+The obstruction-only model performed quite well by focusing exclusively on detecting obstructions, this model demonstrated superior performance in identifying potential hazards. This model observed an mAP50 of .77.
 
 **Multi-Class Model (Poles, Wires, Obstructions)**
-Our multi-class model, trained to simultaneously detect poles, wires, and obstructions, showed lower performance compared to the obstruction-only model. While this approach provided a comprehensive view of the electrical infrastructure, it struggled with the complexity of distinguishing between multiple classes in often-cluttered environments.
+Our multi-class model, trained to simultaneously detect poles, wires, and obstructions, showed lower performance compared to the obstruction-only model, which struggled with the complexity of distinguishing between multiple classes. This model observed an mAP50 of .521.
 
 **Independent Models for Each Class**
-Our approach using separate models for poles, wires, and obstructions, followed by NMS, yielded results that fell between the other two approaches. This method showed improvements over the multi-class model but still fell short of the obstruction-only model's performance.
+Our approach using separate models for poles, wires, and obstructions, followed by NMS, yielded **the best results**. This model observed an mAP50 of .77. This method performed the best in detecting obstructions as it has the same metrics as the obstruction-only model but also performed the best visually, removing double bounding boxes and labeling poles and wires as well.
+
+
+## Conclusion
+We found that utilizing independent models with non-max suppression yielded the best results. Our findings underscore the importance of tailoring the modeling approach to the specific needs of the task at hand. In the context of electrical asset management, the ability to reliably detect obstructions proved more valuable than a more comprehensive but potentially less accurate multi-class detection system. The use of such Computer vision models may prove helpful in proactively preventing wildfires and working to improve the safety and well-being of residents.
 
 
 
