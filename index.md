@@ -9,58 +9,18 @@ title: Computer Vision-Based Obstruction Detection
 This project leverages advanced computer vision models to automatically detect and classify obstructions near SDG&E power lines. By analyzing visual/aerial data, the system aims to identify potential hazards like vegetation encroachment and damaged equipment before they can cause infrastructure damage or trigger wildfires. This proactive approach enhances grid reliability and public safety through early detection of risks.
 
 ![In this image a branch is being identified by our model as an obstruction.](./photos/twig-on-powerline.png)
-**Video of working model demonstration**
 
 ## Introduction
 California has been facing surges in wildfires, often sparked by electrical infrastructure during high winds and equipment failures. Currently, SDG&E uses Public Safety Power Shutoffs (PSPS), cutting power during dangerous conditions, to reduce the spread of these fires. While effective, PSPS also causes economic losses and health risks. As wildfire threats grow, data-driven strategies to mitigate these risks proactively are essential to maintain the safety and well-being of San Diegans.
 
+![Infraction frequency](./photos/eda(1).png)
+
 ## Methodology
 Our methodology for developing an obstruction detection system for electrical assets using YOLOv11 followed a structured pipeline combining computer vision best practices with modern deep learning techniques. YOLOv11, released in late 2024 by Ultralytics, represents the latest advancement in the YOLO (You Only Look Once) family of object detection models. We chose YOLOv11 for our project due to its superior performance in real-time object detection scenarios. YOLOv11 achieves higher mean Average Precision (mAP) and is more computationally efficient than its predecessors, allowing for quicker and more accurate identification.
 
-**figure here**
+![Infraction frequency](./photos/yolov11_architecture.png)
 
-<style>
-  details {
-    border: 2px solid #007acc; /* Blue outline */
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-    cursor: pointer;
-  }
-
-  summary {
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px;
-  }
-
-  details[open] {
-    background-color: #e6f2ff; /* Light blue when expanded */
-  }
-
-  details p {
-    margin-top: 10px;
-    padding-left: 5px;
-  }
-</style>
-
-<details>
-  <summary>🔍 <strong>Exploratory Data Analysis (EDA)</strong></summary>
-  <p>We began by conducting EDA on outage data and infraction data per equipment type...</p>
-</details>
-
-<details>
-  <summary>📊 <strong>Dataset Curation</strong></summary>
-  <p>We gathered relevant videos and images, then used Roboflow for image annotation...</p>
-</details>
-
-<details>
-  <summary>🖼 <strong>Image Annotation & Augmentation</strong></summary>
-  <p>We labeled images with bounding boxes for obstructions and used augmentation techniques...</p>
-</details>
-
-The implementation of our models' consisted of five primary phases: EDA(exploratory data analysis), dataset curation, model configuration, training optimization, and performance evaluation. Through conducting EDA on outage and infraction data per equipment type we were able to see that poles, conductors, and crossarms were the electrical assets that had the highest number of outages and infractions. In the second phase, we curated data for our model by gathering relevant videos and images then manually annotated each image labeling the poles, wires, and obstructions. The dataset consists of 383 annotated images with nearly an equal split between obstruction and non-obstruction images. In the third phase, we enhanced the dataset by applying image augmentations (such as auto-orient, resize, contrast adjustment, horizontal/vertical flips, rotations, shears, changes in hue, brightness, exposure, blur, and noise). These augmentations aided in improving the model's robustness. To train our model, we took three different approaches. One trained on all three classes (poles, wires, and obstructions), one only on obstructions, and one on three different models (one for each respective class) and combined then refined through Non-maximum suppression.
+The implementation of our models consisted of five primary phases: EDA(exploratory data analysis), dataset curation, model configuration, training optimization, and performance evaluation. By conducting EDA on outage and infraction data per equipment type, we could see that poles, conductors, and crossarms were the electrical assets with the highest number of outages and infractions. In the second phase, we curated data for our model by gathering relevant videos and images then manually annotating each image, labeling the poles, wires, and obstructions. The dataset comprises 383 annotated images with nearly an equal split between obstruction and non-obstruction images. In the third phase, we enhanced the dataset by applying image augmentations (such as auto-orient, resize, contrast adjustment, horizontal/vertical flips, rotations, shears, changes in hue, brightness, exposure, blur, and noise). These augmentations aided in improving the model's robustness. To train our model, we took three different approaches. One trained on all three classes (poles, wires, and obstructions), one only on obstructions, and one on three different models (one for each respective class) and combined then refined through Non-maximum suppression.
 
     Notes:
    Train model with augmentation
