@@ -1,7 +1,8 @@
 # Identifying Obstructions in Power Lines
 
 You can access our website here: https://wkam3.github.io/Identifying-Obstruction-in-Power-Lines/
-This guide will help you set up a Python environment to run the object detection notebook.
+This guide will help you set up a Python environment to run our obstruction detection models.
+You will need GPU access to run this code.
 
 ---
 
@@ -88,7 +89,19 @@ kubectl delete --all pods
 ```
 ---
 
-### **7. Deactivating the Environment**  
+### **7. Activating the Demo App**
+1. Open the project
+2. activate environment (described earlier)
+3. run (for mac. May be different for windows.):
+```bash
+python Project_code/app.py
+```
+4. The output in the terminal should have a local URL and a public URL. Click on either.
+5. You're ready to use the app! 😊
+
+---
+
+### **8. Deactivating the Environment**  
 When you're done, deactivate the virtual environment:  
 ```bash
 conda deactivate
