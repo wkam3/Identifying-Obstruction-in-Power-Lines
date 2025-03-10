@@ -45,8 +45,29 @@ The obstruction-only model performed quite well by focusing exclusively on detec
 **Multi-Class Model (Poles, Wires, Obstructions)**
 Our multi-class model, trained to simultaneously detect poles, wires, and obstructions, showed lower performance compared to the obstruction-only model, which struggled with the complexity of distinguishing between multiple classes. This model observed an mAP50 of .521.
 
-**Independent Models for Each Class**
+<table>
+  <caption>Table of Annotated Images Multi-Class Model</caption>
+  <tr>
+    <td><img src="./photos/allClass1.jpg" alt="Image 1" width="200"></td>
+    <td><img src="./photos/all-class-photo2.jpg" alt="Image 2" width="200"></td>
+    <td><img src="./photos/all-class-photo3.jpg" alt="Image 3" width="200"></td>
+    <td><img src="./photos/AllClass4.jpg" alt="Image 4" width="200"></td>
+  </tr>
+</table>
+
+
+**NMS Model**
 Our approach using separate models for poles, wires, and obstructions, followed by NMS, yielded **the best results**. This model observed an mAP50 of .77. This method performed the best in detecting obstructions as it has the same metrics as the obstruction-only model but also performed the best visually, removing double bounding boxes and labeling poles and wires as well.
+
+<table>
+  <caption>Table of Annotated Images NMS Model</caption>
+  <tr>
+    <td><img src="./photos/NMS-1.jpg" alt="Image 1" width="200"></td>
+    <td><img src="./photos/NMS-photo2.jpg" alt="Image 2" width="200"></td>
+    <td><img src="./photos/NMS-photo3.jpg" alt="Image 3" width="200"></td>
+    <td><img src="./photos/NMS4.jpg" alt="Image 4" width="200"></td>
+  </tr>
+</table>
 
 
 ## Conclusion
