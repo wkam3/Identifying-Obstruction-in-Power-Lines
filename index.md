@@ -9,7 +9,7 @@ title: Computer Vision-Based Obstruction Detection
 This project leverages advanced computer vision models to automatically detect and classify obstructions near SDG&E power lines. By analyzing visual/aerial data, the system aims to identify potential hazards like vegetation encroachment and damaged equipment before they can cause infrastructure damage or trigger wildfires. This proactive approach enhances grid reliability and public safety through early detection of risks.
 
 ![In this image a branch is being identified by our model as an obstruction.](./photos/twig-on-powerline.png)
-*Figure 1: Infraction frequency.*
+*In this image a branch is being identified by our model as an obstruction.*
 
 ## Introduction
 California has been facing surges in wildfires, often sparked by electrical infrastructure during high winds and equipment failures. Currently, SDG&E uses Public Safety Power Shutoffs (PSPS), cutting power during dangerous conditions, to reduce the spread of these fires. While effective, PSPS also causes economic losses and health risks. As wildfire threats grow, data-driven strategies to mitigate these risks proactively are essential to maintain the safety and well-being of San Diegans.
@@ -26,9 +26,21 @@ The implementation of our models consisted of five primary phases: EDA(explorato
 ## Results
 
 **Model Performance Comparison table**
+![](./photos/table1.png)
 
 **Obstruction-Only Model**
 The obstruction-only model performed quite well by focusing exclusively on detecting obstructions, this model demonstrated superior performance in identifying potential hazards. This model observed an mAP50 of .77.
+
+<table>
+  <caption>Table of Annotated Images Obstruction Only Model</caption>
+  <tr>
+    <td><img src="./photos/OBS-only1.jpg" alt="Image 1" width="200"></td>
+    <td><img src="./photos/Obs-only-photo2.jpg" alt="Image 2" width="200"></td>
+    <td><img src="./photos/Obs-only-photo3.jpg" alt="Image 3" width="200"></td>
+    <td><img src="./photos/OBS4.jpg" alt="Image 4" width="200"></td>
+  </tr>
+</table>
+
 
 **Multi-Class Model (Poles, Wires, Obstructions)**
 Our multi-class model, trained to simultaneously detect poles, wires, and obstructions, showed lower performance compared to the obstruction-only model, which struggled with the complexity of distinguishing between multiple classes. This model observed an mAP50 of .521.
