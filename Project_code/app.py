@@ -9,7 +9,7 @@ import torchvision.transforms as transforms  # Import transforms
 import os
 
 # Load your trained model
-model_path = "Project_code/runs/detect/train13/weights/best.pt"  # Adjust this path if necessary
+model_path = "model.pt"  # Adjust this path if necessary
 model = YOLO(model_path)  # Load the YOLO model directly
 model.eval()  # Set the model to evaluation mode
 
@@ -18,6 +18,7 @@ def process_image(input_image):
     image = Image.fromarray(input_image)
     
     # Prepare image for model
+    original_size = image.size  # Store the original size of the image
     image_tensor = transforms.Compose([
         transforms.Resize((416, 416)),
         transforms.ToTensor(),
@@ -31,6 +32,11 @@ def process_image(input_image):
     boxes = outputs[0].boxes.xyxy
     scores = outputs[0].boxes.conf
     classes = outputs[0].boxes.cls
+
+    # Reproject boxes to original image size
+    scale_x = original_size[0] / 416
+    scale_y = original_size[1] / 416
+    boxes = boxes * torch.tensor([scale_x, scale_y, scale_x, scale_y])
 
     # Draw predictions on image
     if len(boxes) > 0:
