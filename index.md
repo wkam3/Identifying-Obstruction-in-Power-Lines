@@ -9,6 +9,7 @@ title: Computer Vision-Based Obstruction Detection
 This project leverages advanced computer vision models to automatically detect and classify obstructions near SDG&E power lines. By analyzing visual/aerial data, the system aims to identify potential hazards like vegetation encroachment and damaged equipment before they can cause infrastructure damage or trigger wildfires. This proactive approach enhances grid reliability and public safety through early detection of risks.
 
 ![In this image a branch is being identified by our model as an obstruction.](./photos/twig-on-powerline.png)
+*Figure 1: Infraction frequency.*
 
 ## Introduction
 California has been facing surges in wildfires, often sparked by electrical infrastructure during high winds and equipment failures. Currently, SDG&E uses Public Safety Power Shutoffs (PSPS), cutting power during dangerous conditions, to reduce the spread of these fires. While effective, PSPS also causes economic losses and health risks. As wildfire threats grow, data-driven strategies to mitigate these risks proactively are essential to maintain the safety and well-being of San Diegans.
@@ -21,9 +22,6 @@ Our methodology for developing an obstruction detection system for electrical as
 ![Infraction frequency](./photos/yolov11_architecture.png)
 
 The implementation of our models consisted of five primary phases: EDA(exploratory data analysis), dataset curation, model configuration, training optimization, and performance evaluation. By conducting EDA on outage and infraction data per equipment type, we could see that poles, conductors, and crossarms were the electrical assets with the highest number of outages and infractions. In the second phase, we curated data for our model by gathering relevant videos and images then manually annotating each image, labeling the poles, wires, and obstructions. The dataset comprises 383 annotated images with nearly an equal split between obstruction and non-obstruction images. In the third phase, we enhanced the dataset by applying image augmentations (such as auto-orient, resize, contrast adjustment, horizontal/vertical flips, rotations, shears, changes in hue, brightness, exposure, blur, and noise). These augmentations aided in improving the model's robustness. To train our model, we took three different approaches. One trained on all three classes (poles, wires, and obstructions), one only on obstructions, and one on three different models (one for each respective class) and combined then refined through Non-maximum suppression.
-
-    Notes:
-   Train model with augmentation
 
 ## Results
 
