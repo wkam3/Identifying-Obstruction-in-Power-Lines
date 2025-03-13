@@ -4,6 +4,9 @@ You can access our website here: https://wkam3.github.io/Identifying-Obstruction
 This guide will help you set up a Python environment to run our obstruction detection models.
 You will need GPU access to run this code.
 
+### Link to Pretrained Yolov11 Model 
+
+  https://github.com/ultralytics/ultralytics
 ---
 
 ## **Setup Instructions with Anaconda Prompt**  
